@@ -1,0 +1,57 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "Nodejs boilerplate with express, nunjucks, webpack and browsersync.",
+  "main": "app.js",
+  "scripts": {
+    "babel": "babel --presets es2015 app/scripts/main.js -o public/js/main.bundle.js",
+    "build": "npm run build:css && npm run build:js && npm run build:assets",
+    "build:css": "node-sass --output-style compressed app/styles/main.scss public/css/main.min.css",
+    "build:js": "npm run webpack",
+    "build:assets": "cpx 'app/assets/**/*.*' public/assets/",
+    "clean": "touch public/tmp.txt && rm -rf public/*",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "eslint app/scripts/**",
+    "lint:css": "sass-lint 'app/**/*.scss' -v -q",
+    "nuke": "npm run clean && rm -rf node_modules/",
+    "postinstall": "npm run build",
+    "start": "node app",
+    "test": "mocha --require @babel/register test/**/*.spec.js && npm run lint",
+    "prewatch": "npm run build:css",
+    "watch": "concurrently \"npm run watch:scss\" \"npm run watch:js\" \"npm run watch:assets\"  \"npm start\"",
+    "watch:scss": "npm run build:css -- -w",
+    "watch:js": "webpack --w",
+    "watch:assets": "npm run build:assets -- -w",
+    "webpack": "webpack"
+  },
+  "author": "https://github.com/AdamChrimes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdamChrimes/nodejs-boilerplate.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "chai": "^4.2.0",
+    "concurrently": "^4.1.2",
+    "cpx": "^1.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.13.1",
+    "sass-lint": "^1.13.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
+}
