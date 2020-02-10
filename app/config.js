@@ -1,6 +1,6 @@
 module.exports = {
   // App name
-  appName: 'Node.js boilerplate',
+  appName: 'NHS Digital architecture service manual',
 
   // Environment
   env: process.env.NODE_ENV || 'development',
