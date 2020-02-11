@@ -1,0 +1,59 @@
+{% set pageTitle = "Portfolio" %}
+{% set pageDescription = "This is the current portfolio as it stands today. For more information, contact the portfolio owner." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block body %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <h2>AIDA</h2>
+    <h3>What is the role of BIDA and how does it help my project?</h3>
+<p>AIDA is empowered by, and operates as a sub-group of, the Enterprise Architecture
+Board (EAB) with devolved responsibility for:</p>
+<ul>
+<li>Commissioning and approving the development of Architectural Principles, Policies,
+Strategies and Standards for Applications and Infrastructure which are clearly aligned
+to the desired business outcomes of NHS Digital and the Digital Delivery Board;
+<li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
+Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
+are maintained;
+<li>Supporting programmes/stakeholders wishing to build or augment new national
+capabilities to understand the agreed Enterprise Architecture;
+<li>Ensuring that there is no duplication and conflicting development work relating
+to national capabilities across the Digital Transformation Portfolio and wider NHS
+Digital programme portfolio;
+<li>Promoting innovations that could augment existing national applications and
+infrastructure;
+<li>Acting as an escalation point for issues that affect Application and Infrastructure
+national capabilities.
+
+</ul>
+<h3>What is the scope of AIDA?</h3>
+<ul>
+<li>Programmes and initiatives overseen by the Digital Delivery Board;
+<li>Local Health and Care Record Exemplars;
+<li>Other programmes being delivered by NHS Digital;
+<li>As instructed, other programmes being delivered across national Health and
+Social Care bodies where the focus is on national capability or where there is
+a clear interface between national and local capabilities.
+</ul>
+  </div>
+</div>
+
+{% endblock %}

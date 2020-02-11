@@ -27,8 +27,27 @@ router.get('/portfolio', (req, res) => {
 router.get('/governance', (req, res) => {
   res.render('pages/governance/index');
 });
-router.get('/governance/eba', (req, res) => {
+
+router.get('/governance/eab', (req, res) => {
   res.render('pages/governance/eab');
 });
+router.get('/governance/cda', (req, res) => {
+  res.render('pages/governance/cda');
+});
+router.get('/governance/aida', (req, res) => {
+  res.render('pages/governance/aida');
+});
+router.get('/governance/dda', (req, res) => {
+  res.render('pages/governance/dda');
+});
+router.get('/governance/bida', (req, res) => {
+  res.render('pages/governance/bida');
+});
 
+router.get('/governance/live-services-board', (req, res) => {
+  res.render('pages/governance/live-services-board');
+});
+router.get('/governance/platform-board', (req, res) => {
+  res.render('pages/governance/platform-board');
+});
 module.exports = router;

@@ -1,0 +1,59 @@
+{% set pageTitle = "Portfolio" %}
+{% set pageDescription = "This is the current portfolio as it stands today. For more information, contact the portfolio owner." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block body %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <h2>DDA</h2>
+    <h3>What is the role of DDA and how does it help my project?</h3>
+<p>DDA is empowered by, and operates as a sub-group of, the Enterprise Architecture
+Board (EAB) with devolved responsibility for:</p>
+<ul>
+<li>Commissioning and approving the development of Architectural Principles, Policies,
+Strategies and Standards for Data which are clearly aligned to the desired business
+outcomes of NHS Digital and the Digital Delivery Board;
+<li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
+Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
+are maintained;
+<li>Collaborating with other external Data Strategy and Standards bodies to ensure that
+system-wide consistency is maintained;
+<li>Establishing a Data Architecture that is appropriate for system-wide adoption;
+<li>Providing strategic oversight for the design and maintenance of a national reference
+data architecture and associated architectural assets;
+<li>Providing leadership for the transformation and standardisation of data architecture;
+<li>Delivering semantic interoperability for direct care;
+<li>Acting as an escalation point for issues of Data and Information policies, strategies
+and standards.
+
+</ul>
+<h3>What is the scope of DDA?</h3>
+<ul>
+<li>Programmes and initiatives overseen by the Digital Delivery Board;
+<li>Local Health and Care Record Exemplars;
+<li>Other programmes being delivered by NHS Digital;
+<li>As instructed, other programmes being delivered across national Health and
+Social Care bodies where the focus is on national capability or where there is
+a clear interface between national and local capabilities.
+</ul>
+  </div>
+</div>
+
+{% endblock %}
