@@ -6,9 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{% if pageDescription %}{{ pageDescription }}{% else %}A simple Node.js boilerplate{% endif %}">
+    <meta name="description" content="{% if pageDescription %}{{ pageDescription }}{% else %}NHS Digital architecture service manual{% endif %}">
 
-    <title>{{ APP_NAME }}</title>
+    <title>{% if pageTitle %}{{ pageTitle }} - NHS Digital architecture service manual{% else %}NHS Digital architecture service manual{% endif %}</title>
 
     <link rel="shortcut icon" href="/assets/favicons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-180x180.png">

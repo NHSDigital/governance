@@ -1,0 +1,30 @@
+{% set pageTitle = "Content" %}
+{% set pageDescription = "Page description" %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block body %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <h2>Page heading</h2>
+    <p>Page content</p>
+  </div>
+</div>
+
+{% endblock %}

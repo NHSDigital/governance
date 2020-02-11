@@ -8,4 +8,20 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.get('/trg', (req, res) => {
+  res.render('pages/trg/index');
+});
+
+router.get('/content', (req, res) => {
+  res.render('pages/content/index');
+});
+
+router.get('/portfolio', (req, res) => {
+  res.render('pages/portfolio/index');
+});
+
+router.get('/governance', (req, res) => {
+  res.render('pages/governance/index');
+});
+
 module.exports = router;
