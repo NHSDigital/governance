@@ -27,5 +27,8 @@ router.get('/portfolio', (req, res) => {
 router.get('/governance', (req, res) => {
   res.render('pages/governance/index');
 });
+router.get('/governance/eba', (req, res) => {
+  res.render('pages/governance/eab');
+});
 
 module.exports = router;
