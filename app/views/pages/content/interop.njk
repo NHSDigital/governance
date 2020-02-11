@@ -1,0 +1,92 @@
+{% set pageTitle = "Interoperability" %}
+{% set pageDescription = "Interoperability is the ability to safely share and make use of shared information
+and services, regardless of the systems in use, and who supplied them." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block body %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <h2>Interoperability</h2>
+    <p>The strategy covers
+delivery of national
+systems and services and
+support/assists the delivery
+of local interoperable solutions.
+It does NOT cover standardising
+care pathways/clinical processes,
+development and maintenance
+of standards, cross-border
+interoperability</p>
+  
+  <h3>Does this apply to me?</h3>
+The principles apply to anyone developing
+anything that involves the collection,
+use, sharing and storage of information
+and data.
+<h3>TRG Applications - pre-requisite for data</h3>
+<p>NHS Digital’s Register of Data Processing (Unified Register) and Information Asset
+Records
+The Data Protection Act 2018 (GDPR Article 30) requires Controller organisations to
+demonstrate accountability. This includes maintaining a register of the processing
+of personal data and stipulates the contents of the register e.g. purpose of the
+processing, categories of data subjects etc.
+For other (non-personal) data there are also valid business reasons for a complete
+and comprehensive record of all processing that supports key business functions.
+GDPR does not require the business function to be
+registered but in order to have a logical structure useful
+to NHS Digital, data processing should be grouped
+under distinct business functions e.g. HR.
+To meet the legal obligation, NHS Digital has
+developed the Unified Register (UR). The UR is
+also the repository for supporting documentation
+(also required by GDPR) such as Data Protection
+Impact Assessments (DPIA), System Level Security
+Policies (SLSP) and other documents. Existing and
+new information assets which include processing
+of personal data (or sensitive personal data) must
+be entered on the UR.</p>  </div>
+
+</div>
+
+<div class="nhsuk-grid-row nhsuk-promo-group">
+  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+    <div class="nhsuk-promo nhsuk-promo--small">
+      <a class="nhsuk-promo__link-wrapper" href="mailto:jonathan.telfer@nhs.net">
+        <div class="nhsuk-promo__content">
+          <h3 class="nhsuk-promo__heading">I want to find more information:</h3>
+          <p class="nhsuk-promo__description">Jonathan Telfer</p>
+        </div>
+      </a>
+    </div>
+  </div>
+   <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+    <div class="nhsuk-promo nhsuk-promo--small">
+      <a class="nhsuk-promo__link-wrapper" href="https://enterprisearchitecture.digital.nhs.uk/system/files/2014-04-04%20-%20Interoperability%20Strategy.pdf">
+        <div class="nhsuk-promo__content">
+          <h3 class="nhsuk-promo__heading">I want more guidance:</h3>
+          <p class="nhsuk-promo__description">The steps are set out in “Information Assets &
+GDPR: A Step by Step Guide”</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+ 
+{% endblock %}

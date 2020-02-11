@@ -57,4 +57,11 @@ router.get('/content/platform-and-infrastructure', (req, res) => {
 router.get('/content/cloud', (req, res) => {
   res.render('pages/content/cloud');
 });
+router.get('/content/data', (req, res) => {
+  res.render('pages/content/data');
+});
+
+router.get('/content/interop', (req, res) => {
+  res.render('pages/content/interop');
+});
 module.exports = router;
