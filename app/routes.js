@@ -50,4 +50,11 @@ router.get('/governance/live-services-board', (req, res) => {
 router.get('/governance/platform-board', (req, res) => {
   res.render('pages/governance/platform-board');
 });
+
+router.get('/content/platform-and-infrastructure', (req, res) => {
+  res.render('pages/content/platform-and-infrastructure');
+});
+router.get('/content/cloud', (req, res) => {
+  res.render('pages/content/cloud');
+});
 module.exports = router;
