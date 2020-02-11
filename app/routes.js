@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.get('/positioning', (req, res) => {
+  res.render('pages/positioning/index');
+});
+
 router.get('/trg', (req, res) => {
   res.render('pages/trg/index');
 });
