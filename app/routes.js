@@ -48,7 +48,6 @@ router.get('/governance/cpo', (req, res) => {
   res.render('pages/governance/cpo');
 });
 
-
 router.get('/governance/live-services-board', (req, res) => {
   res.render('pages/governance/live-services-board');
 });
