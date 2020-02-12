@@ -21,7 +21,10 @@
 {% block body %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
+  <div class="nhsuk-grid-column-one-third">
+    {% include "./includes/_side-navigation.njk" %}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <h2>CDA</h2>
     <h3>What is the role of CDA and how does it help my project?</h3>
 <p>CDA (The Cyber Design Authority) is empowered by, and operates as a sub-group of,
@@ -68,7 +71,7 @@ a clear interface between national and local capabilities.
       </a>
     </div>
   </div>
-   
+
 </div>
 
 {% endblock %}

@@ -1,0 +1,20 @@
+{% set governancePages = [
+  { title: "Governance home", url: "/governance/" },
+  { title: "Applications and Infrastructure Design Authority", url: "/governance/aida" },
+  { title: "Business Interoperability Design Authority", url: "/governance/bida" },
+  { title: "Cyber Design Authority", url: "/governance/cda" },
+  { title: "Corporate Portfolio Office", url: "/governance/CPO" },
+  { title: "Data Design Authority", url: "/governance/dda" },
+  { title: "Enterprise Architecture Board", url: "/governance/eab" },
+  { title: "Live Service Board", url: "/governance/live-services-board" },
+  { title: "Platform Board", url: "/governance/plastform-board" }
+] %}
+
+<nav class="app-side-nav">
+  <h2 class="app-side-nav__heading">Governance</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+  {% for item in governancePages %}
+    <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endfor %}
+  </ul>
+</nav>

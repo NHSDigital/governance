@@ -21,7 +21,10 @@
 {% block body %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
+  <div class="nhsuk-grid-column-one-third">
+    {% include "./includes/_side-navigation.njk" %}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <h2>EAB</h2>
     <h3>What is the role of EAB and how does it help my project?</h3>
 <p>The EAB ensures enterprise-wide strategic coordination across the national health
@@ -50,6 +53,6 @@ national and local capabilities.
       </a>
     </div>
   </div>
-   
+
 </div>
 {% endblock %}
