@@ -21,44 +21,41 @@
 {% block body %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
+  <div class="nhsuk-grid-column-one-third">
+    {% include "./includes/_side-navigation.njk" %}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <h2>CDA</h2>
     <h3>What is the role of CDA and how does it help my project?</h3>
-<p>CDA (The Cyber Design Authority) is empowered by, and operates as a sub-group of,
-the EAB with devolved responsibility for:</p>
-<ul>
-<li>Commissioning and approving the development of: Architectural Principles, Policies,
-Standards and Patterns for Cyber Security, which are clearly aligned to the desired
-business outcomes of NHS Digital and the Digital Deliver Board (the internal
-<a href="https://hscic365.sharepoint.com/data_Security_Centre/Pages/Default.aspx">DSC (Data Security Centre)</a> CDA team will develop these);
-<li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
-Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
-are maintained;
-<li>Supporting programmes/stakeholders wishing to build or augment new
-national capabilities to understand the agreed Enterprise Architecture from
-a security perspective;
-<li>Ensuring that there is no duplication and conflicting development work relating to
-national capabilities across the wider NHS Digital programme portfolio with regard
-to cyber security;
-<li>Discussing and promoting innovations that could augment existing national cyber
-security capabilities;
-<li>Acting as an escalation point for issues that affect cyber security national capabilities
-and the wider enterprise architecture
+    <p>CDA (The Cyber Design Authority) is empowered by, and operates as a sub-group of,
+    the EAB with devolved responsibility for:</p>
+    <ul>
+      <li>Commissioning and approving the development of: Architectural Principles, Policies,
+      Standards and Patterns for Cyber Security, which are clearly aligned to the desired
+      business outcomes of NHS Digital and the Digital Deliver Board (the internal
+      <a href="https://hscic365.sharepoint.com/data_Security_Centre/Pages/Default.aspx">DSC (Data Security Centre)</a> CDA team will develop these);</li>
+      <li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
+      Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
+      are maintained;</li>
+      <li>Supporting programmes/stakeholders wishing to build or augment new
+      national capabilities to understand the agreed Enterprise Architecture from
+      a security perspective;</li>
+      <li>Ensuring that there is no duplication and conflicting development work relating to
+      national capabilities across the wider NHS Digital programme portfolio with regard
+      to cyber security;</li>
+      <li>Discussing and promoting innovations that could augment existing national cyber
+      security capabilities;</li>
+      <li>Acting as an escalation point for issues that affect cyber security national capabilities
+      and the wider enterprise architecture</li>
+    </ul>
+    <h3>What is the scope of CDA?</h3>
+    <ul>
+      <li>Programmes and initiatives overseen by the Digital Delivery Board;
+      <li>Local Health and Care Record Exemplars;
+      <li>Other programmes being delivered by NHS Digital;
+      <li>As instructed, other programmes being delivered across national Health and Social Care bodies where the focus is on national capability or where there is a clear interface between national and local capabilities.
+    </ul>
 
-</ul>
-<h3>What is the scope of CDA?</h3>
-<ul>
-<li>Programmes and initiatives overseen by the Digital Delivery Board;
-<li>Local Health and Care Record Exemplars;
-<li>Other programmes being delivered by NHS Digital;
-<li>As instructed, other programmes being delivered across national Health and
-Social Care bodies where the focus is on national capability or where there is
-a clear interface between national and local capabilities.
-</ul>
-  </div>
-</div>
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
     <div class="nhsuk-promo nhsuk-promo--small">
       <a class="nhsuk-promo__link-wrapper" href="mailto:cybersecurity@nhs.net">
         <div class="nhsuk-promo__content">
@@ -67,8 +64,8 @@ a clear interface between national and local capabilities.
         </div>
       </a>
     </div>
+
   </div>
-   
 </div>
 
 {% endblock %}

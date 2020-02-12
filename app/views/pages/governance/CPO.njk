@@ -1,4 +1,4 @@
-{% set pageTitle = "Portfolio" %}
+{% set pageTitle = "Corporate Portfolio Office" %}
 {% set pageDescription = "This is the current portfolio as it stands today. For more information, contact the portfolio owner." %}
 
 {% extends 'includes/layout.njk' %}
@@ -21,10 +21,12 @@
 {% block body %}
 
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
+  <div class="nhsuk-grid-column-one-third">
+    {% include "./includes/_side-navigation.njk" %}
+  </div>
+  <div class="nhsuk-grid-column-two-thirds">
     <h2>CPO</h2>
-    <p>For information on the role of CPO and guidance the investment case approval process,
-please visit our intranet page <a href="https://hscic365.sharepoint.com/CorporatePortfolioDivision/Pages/Portfolio-Governance-and-Approvals.aspx">Portfolio Governance and Approvals Process</a></p>
+    <p>For information on the role of CPO and guidance the investment case approval process, please visit our intranet page <a href="https://hscic365.sharepoint.com/CorporatePortfolioDivision/Pages/Portfolio-Governance-and-Approvals.aspx">Portfolio Governance and Approvals Process</a></p>
   </div>
 </div>
 
