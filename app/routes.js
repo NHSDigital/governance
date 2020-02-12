@@ -8,16 +8,16 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
-router.get('/positioning', (req, res) => {
-  res.render('pages/positioning/index');
+router.get('/background', (req, res) => {
+  res.render('pages/background/index');
 });
 
 router.get('/trg', (req, res) => {
   res.render('pages/trg/index');
 });
 
-router.get('/content', (req, res) => {
-  res.render('pages/content/index');
+router.get('/information', (req, res) => {
+  res.render('pages/information/index');
 });
 
 router.get('/portfolio', (req, res) => {
@@ -51,17 +51,17 @@ router.get('/governance/platform-board', (req, res) => {
   res.render('pages/governance/platform-board');
 });
 
-router.get('/content/platform-and-infrastructure', (req, res) => {
-  res.render('pages/content/platform-and-infrastructure');
+router.get('/information/platform-and-infrastructure', (req, res) => {
+  res.render('pages/information/platform-and-infrastructure');
 });
-router.get('/content/cloud', (req, res) => {
-  res.render('pages/content/cloud');
+router.get('/information/cloud', (req, res) => {
+  res.render('pages/information/cloud');
 });
-router.get('/content/data', (req, res) => {
-  res.render('pages/content/data');
+router.get('/information/data', (req, res) => {
+  res.render('pages/information/data');
 });
 
-router.get('/content/interop', (req, res) => {
-  res.render('pages/content/interop');
+router.get('/information/interop', (req, res) => {
+  res.render('pages/information/interop');
 });
 module.exports = router;
