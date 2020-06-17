@@ -2,6 +2,9 @@
 
 https://architecture-service-manual.azurewebsites.net/
 
+A preview site for upcoming changes is here:
+https://architecture-service-manual-staging.azurewebsites.net
+
 ## Prerequisite
 
 Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">Node.js</a>, which includes NPM.
