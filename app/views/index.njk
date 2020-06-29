@@ -1,5 +1,5 @@
-{% set pageTitle = "" %}
-{% set pageDescription = " " %}
+{% set pageTitle = "Title needed" %}
+{% set pageDescription = "This is the lead description needed" %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -24,7 +24,8 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-full">
     <div class="nhsuk-width-container">
-
+      <h1 class="app-page-heading">{{ pageTitle }}</h1>
+      <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
         <h2 id="how-this-manual-could-help-you">How this manual could help you</h2>
         <p>As a Technical Architect or Project lead:</p>
     <ul>
