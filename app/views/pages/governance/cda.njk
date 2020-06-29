@@ -1,71 +1,82 @@
 {% set pageTitle = "Cyber Design Authority" %}
-{% set pageDescription = "This is the current portfolio as it stands today. For more information, contact the portfolio owner." %}
+{% set pageDescription = "This is the newly formed Cyber Design Authority." %}
 
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance/cda"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
+  </div>
+  </nav>
+{% endblock %}
+
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_governance-side-navigation.njk" %}
         </div>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+      <h3>What is the role of the CDA and how does it help my project?</h3>
+      <p>CDA (The Cyber Design Authority) is empowered by, and operates as a sub-group of,
+      the EAB with devolved responsibility for:</p>
+      <ul>
+        <li>Commissioning and approving the development of: Architectural Principles, Policies,
+        Standards and Patterns for Cyber Security, which are clearly aligned to the desired
+        business outcomes of NHS Digital and the Digital Delivery Board (the internal
+        <a href="https://hscic365.sharepoint.com/data_Security_Centre/Pages/Default.aspx">DSC (Data Security Centre)</a> CDA team will develop these);</li>
+        <li>Collaborating with other Design Authority Boards to ensure that coherent and cohesive
+        Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
+        are maintained;</li>
+        <li>Supporting programmes/stakeholders wishing to build or augment new
+        national capabilities to understand the agreed Enterprise Architecture from
+        a security perspective;</li>
+        <li>Ensuring that there is no duplication and conflicting development work relating to
+        national capabilities across the wider NHS Digital programme portfolio with regard
+        to cyber security;</li>
+        <li>Discussing and promoting innovations that could augment existing national cyber
+        security capabilities;</li>
+        <li>Acting as an escalation point for issues that affect cyber security national capabilities
+        and the wider enterprise architecture.</li>
+      </ul>
+      <h3>What is the scope of CDA?</h3>
+      <ul>
+        <li>Programmes and initiatives overseen by the Digital Delivery Board;
+        <li>Local Health and Care Record Exemplars;
+        <li>Other programmes being delivered by NHS Digital;
+        <li>As instructed, other programmes being delivered across national Health and Social Care bodies where the focus is on national capability or where there is a clear interface between national and local capabilities.
+      </ul>
+
+      <div class="nhsuk-promo nhsuk-promo--small">
+        <a class="nhsuk-promo__link-wrapper" href="mailto:sarah.grundy@nhs.net">
+          <div class="nhsuk-promo__content">
+            <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+            <p class="nhsuk-promo__description">
+              Cyber Security Team</br>
+              Secretariat: Sarah Grundy</br>
+            </p>
+          </div>
+        </a>
+      </div>
+
       </div>
     </div>
   </div>
-</section>
-{% endblock %}
-
-{% block body %}
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-third">
-    {% include "./includes/_side-navigation.njk" %}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>CDA</h2>
-    <h3>What is the role of CDA and how does it help my project?</h3>
-    <p>CDA (The Cyber Design Authority) is empowered by, and operates as a sub-group of,
-    the EAB with devolved responsibility for:</p>
-    <ul>
-      <li>Commissioning and approving the development of: Architectural Principles, Policies,
-      Standards and Patterns for Cyber Security, which are clearly aligned to the desired
-      business outcomes of NHS Digital and the Digital Deliver Board (the internal
-      <a href="https://hscic365.sharepoint.com/data_Security_Centre/Pages/Default.aspx">DSC (Data Security Centre)</a> CDA team will develop these);</li>
-      <li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
-      Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
-      are maintained;</li>
-      <li>Supporting programmes/stakeholders wishing to build or augment new
-      national capabilities to understand the agreed Enterprise Architecture from
-      a security perspective;</li>
-      <li>Ensuring that there is no duplication and conflicting development work relating to
-      national capabilities across the wider NHS Digital programme portfolio with regard
-      to cyber security;</li>
-      <li>Discussing and promoting innovations that could augment existing national cyber
-      security capabilities;</li>
-      <li>Acting as an escalation point for issues that affect cyber security national capabilities
-      and the wider enterprise architecture</li>
-    </ul>
-    <h3>What is the scope of CDA?</h3>
-    <ul>
-      <li>Programmes and initiatives overseen by the Digital Delivery Board;
-      <li>Local Health and Care Record Exemplars;
-      <li>Other programmes being delivered by NHS Digital;
-      <li>As instructed, other programmes being delivered across national Health and Social Care bodies where the focus is on national capability or where there is a clear interface between national and local capabilities.
-    </ul>
-
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="mailto:cybersecurity@nhs.net">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
-          <p class="nhsuk-promo__description">Cyber Security Team</p>
-        </div>
-      </a>
-    </div>
-
-  </div>
-</div>
-
 {% endblock %}

@@ -1,0 +1,43 @@
+{% set pageTitle = "Live Service Board" %}
+{% set pageDescription = "This is the live Services Board" %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance/lsb"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
+  </div>
+  </nav>
+{% endblock %}
+
+
+{% block body %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_governance-side-navigation.njk" %}
+        </div>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+
+      <p><a href="mailto:smo@nhs.net">For more information</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

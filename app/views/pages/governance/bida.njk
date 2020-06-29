@@ -4,29 +4,36 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
-        </div>
-      </div>
-    </div>
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance/bida"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
   </div>
-</section>
+  </nav>
 {% endblock %}
 
 {% block body %}
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-third">
-    {% include "./includes/_side-navigation.njk" %}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>BIDA</h2>
-    <h3>What is the role of BIDA and how does it help my project?</h3>
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_governance-side-navigation.njk" %}
+        </div>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+    <h3>What is the role of the BIDA and how does it help my project?</h3>
     <p>BIDA operates as a sub-group of EAB with specific authority covering core common
     business design decisions around local and national interoperability, supporting the
     EAB in aligning proposed technology with business capabilities, commissioning and
@@ -45,11 +52,12 @@
       <a class="nhsuk-promo__link-wrapper" href="mailto:ginger.buckland@nhs.net">
         <div class="nhsuk-promo__content">
           <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
-          <p class="nhsuk-promo__description">Ginger Buckland</p>
+          <p class="nhsuk-promo__description">Ginger Buckland, Secretariat</p>
         </div>
       </a>
     </div>
 
+      </div>
+    </div>
   </div>
-</div>
 {% endblock %}

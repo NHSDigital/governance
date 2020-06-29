@@ -1,32 +1,40 @@
 {% set pageTitle = "Data Design Authority" %}
-{% set pageDescription = "This is the Data Design Authority." %}
+{% set pageDescription = "This is the Data Design Authority" %}
 
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
-        </div>
-      </div>
-    </div>
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance/dda"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
   </div>
-</section>
+  </nav>
 {% endblock %}
 
 {% block body %}
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-third">
-    {% include "./includes/_side-navigation.njk" %}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_governance-side-navigation.njk" %}
+        </div>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
     <h2>DDA</h2>
-    <h3>What is the role of DDA and how does it help my project?</h3>
+    <h3>What is the role of the DDA and how does it help my project?</h3>
     <p>DDA is empowered by, and operates as a sub-group of, the Enterprise Architecture
     Board (EAB) with devolved responsibility for:</p>
     <ul>
@@ -58,14 +66,17 @@
     </ul>
 
     <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="mailto:nicholas.oughtibridge@nhs.net">
+      <a class="nhsuk-promo__link-wrapper" href="mailto:ginger.buckland@nhs.net">
         <div class="nhsuk-promo__content">
           <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
-          <p class="nhsuk-promo__description">Nicholas Oughtibridge</p>
+          <p class="nhsuk-promo__description">
+            Secretariat: Ginger Buckland</br>
+          </p>
         </div>
       </a>
     </div>
 
+      </div>
+    </div>
   </div>
-</div>
 {% endblock %}

@@ -1,56 +1,61 @@
 {% set pageTitle = "Governance" %}
-{% set pageDescription = "Technical governance ensures we’re doing the right things and, doing them correctly." %}
+{% set pageDescription = "Technical governance ensures we’re doing the right things and, doing them correctly.
+          Our various boards are each responsible for their own part in this:" %}
 
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
+<nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+{%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+<div class="nhsuk-width-container">
+  <ol class="nhsuk-breadcrumb__list">
+    {%- for item in params.items %}
+      {%- if item.href %}
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+      {%- endif -%}
+    {% endfor %}
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+    <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+  </ol>
+</div>
+</nav>
+{% endblock %}
+
+
+{% block body %}
     <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+      <div class="nhsuk-grid-column-full app-component-reading-width">
+        <div class="app-pane">
+          <div class="app-pane__side-bar">
+            <div class="app-pane">
+              {% include "./includes/_governance-side-navigation.njk" %}
+            </div>
+          </div>
+          <div class="app-pane__main-content">
+          <h1 class="app-page-heading">{{ pageTitle }}</h1>
+          <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+          <h3>What should we be doing? </h3>
+          <ul>
+          <li>Is it strategically aligned?</li>
+          <li>Are the dependencies managed?</li>
+          <li>Technology radar</li>
+          <li>Understanding and managing levels of debt</li>
+          </ul>
+           <p>The Enterprise Architecture Board (EAB) oversees four design authorities who are responsible for maintaining those policies and standards:</p>
+              <ul>
+                <li><a href="/governance/bida">BIDA - Business Interoperability Design Authority</a></li>
+                <li><a href="/governance/aida">AIDA - Applications and Infrastructure Design Authority</a></li>
+                <li><a href="/governance/dda">DDA Data Design Authority</a></li>
+                <li><a href="/governance/cda">CDA The newly formed Cyber Design Authority</a></li>
+              </ul>
+          <p>There are also two more boards responsible for live services, portfolio and platforms</p>
+           <ul>
+                <li><a href="/governance/cpo">Central Portfolio Office</a></li>
+                <li><a href="/governance/live-services-board">Live Services Board</a></li>
+                <li><a href="/governance/platform-board">Platform Board</a></li>
+              </ul>
+            </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-{% endblock %}
-
-{% block body %}
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-third">
-    {% include "./includes/_side-navigation.njk" %}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>Governance Home</h2>
-    <p>Technical governance ensures we’re doing the right things and, doing them correctly.
-Our various boards are each responsible for their own part in this:</p>
-<h3>What should we be doing? </h3>
-
-<ul>
-<li>Is it strategically aligned?</li>
-<li>Are the dependencies managed?</li>
-<li>Technology radar</li>
-<li>Understanding and managing levels of debt</li>
-</ul>
-
- <p>The Enterprise Architecture Board (EAB) oversees four design authorities who are responsible for maintaining those policies and standards:</p>
-    <ul>
-      <li><a href="/governance/bida">BIDA - Business Interoperability Design Authority</a></li>
-      <li><a href="/governance/aida">AIDA - Applications and Infrastructure Design Authority</a></li>
-      <li><a href="/governance/dda">DDA Data Design Authority</a></li>
-      <li><a href="/governance/cda">CDA The newly formed Cyber Design Authority</a></li>
-    </ul>
-<p>There are also two more boards responsible for live services, portfolio and platforms</p>
- <ul>
-      <li><a href="/governance/cpo">Central Portfolio Office</a></li>
-      <li><a href="/governance/live-services-board">Live Services Board</a></li>
-      <li><a href="/governance/platform-board">Platform Board</a></li>
-    </ul>
-  </div>
-</div>
-
 {% endblock %}
