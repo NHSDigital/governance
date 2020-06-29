@@ -1,0 +1,13 @@
+{% set trgPages = [
+  { title: "TRG home", url: "/trg" },
+  { title: "Contacts", url: "/trg/contacts" }
+] %}
+
+<nav class="app-side-nav">
+  <h2 class="app-side-nav__heading">Technical Review Group</h2>
+  <ul class="nhsuk-list app-side-nav__list">
+    {% for item in trgPages %}
+      <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
