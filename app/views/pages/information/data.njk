@@ -1,70 +1,85 @@
 {% set pageTitle = "Data" %}
 {% set pageDescription = "The DDA (Data Design Authority) Principles exist to communicate the rules and
-guidelines around the use of Information and Data within the NHS." %}
+guidelines around the use of information and data within the NHS." %}
 
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
-        </div>
-      </div>
-    </div>
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Information</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information/data" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
   </div>
-</section>
+  </nav>
 {% endblock %}
 
+
 {% block body %}
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2>Data</h2>
-    <p>It is really important that you familiarise yourself with these in order to remain both compliant but also keep you in line with the NHS code of practice on confidential information </p>
-  
-  <h3>Does this apply to me?</h3>
-<p>The principles apply to anyone developing anything that involves the collection, use, sharing and storage of information and data.</p>
-
-<h3>TRG Applications - pre-requisite for data</h3>
-<p>NHS Digital’s Register of Data Processing (Unified Register) and Information Asset Records 
-
-The Data Protection Act 2018 (GDPR Article 30) requires Controller organisations todemonstrate accountability. This includes maintaining a register of the processing
-of personal data and stipulates the contents of the register e.g. purpose of the processing, categories of data subjects etc.
-
-For other (non-personal) data there are also valid business reasons for a complete and comprehensive record of all processing that supports key business functions.
-GDPR does not require the business function to be registered but in order to have a logical structure useful to NHS Digital, data processing should be grouped under distinct business functions e.g. HR. 
-
-To meet the legal obligation, NHS Digital has developed the Unified Register (UR). The UR is also the repository for supporting documentation
-(also required by GDPR) such as Data Protection Impact Assessments (DPIA), System Level Security
-Policies (SLSP) and other documents. Existing and new information assets which include processing
-of personal data (or sensitive personal data) must be entered on the UR.</p>  </div>
-
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="mailto:officeofthesiro@nhs.net">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find more information:</h3>
-          <p class="nhsuk-promo__description">Contact office of the SIRO</p>
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_information-side-navigation.njk" %}
         </div>
-      </a>
-    </div>
-  </div>
-   <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Pages/Getting-PRepared-for-new-data-protection-law.aspx">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want more guidance:</h3>
-          <p class="nhsuk-promo__description">The steps are set out in “Information Assets &
-GDPR: A Step by Step Guide”</p>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+        <p>It is really important that you familiarise yourself with these in order to remain both compliant but also keep you in line with the NHS code of practice on confidential information.</p>
+        <h3>Does this apply to me?</h3>
+        <p>The principles apply to anyone developing anything that involves the collection, use, sharing and storage of information and data.</p>
+        <p>If you are working on anything related to data, you will also need to complete a Data Processing Impact Assessment (DPIA) and, if you are hosting in the Cloud, a Cloud Risk score.</p>
+        <p>Note - if the Cloud Risk score is 1 or 2, TRG can assess it. If higher, you will need to attend the Platforms Board for approval.</p>
+
+        <h3>TRG Applications - pre-requisite for data</h3>
+        <p>NHS Digital’s Register of Data Processing (Unified Register) and Information Asset Records.</p>
+        <p>The Data Protection Act 2018 (GDPR Article 30) requires Controller organisations to demonstrate accountability. This includes maintaining a register of the processing
+        of personal data and stipulates the contents of the register e.g. purpose of the processing, categories of data subjects etc.</p>
+
+        <p>For other (non-personal) data there are also valid business reasons for a complete and comprehensive record of all processing that supports key business functions.
+        GDPR does not require the business function to be registered but in order to have a logical structure useful to NHS Digital, data processing should be grouped under distinct business functions e.g. HR.</p>
+
+        <p>To meet the legal obligation, NHS Digital has developed the Unified Register (UR). The UR is also the repository for supporting documentation
+        (also required by GDPR) such as Data Protection Impact Assessments (DPIA), System Level Security
+        Policies (SLSP) and other documents. Existing and new information assets which include processing
+        of personal data (or sensitive personal data) must be entered on the UR.</p>
+
+        <p>A clear statement must be included on documentation submitted to TRG that the status of the UR entry and associated documentation has been completed (or reasons why not, e.g. already registered and no change to existing documentation). This will avoid delay in approval.</p>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+        <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+          <div class="nhsuk-promo nhsuk-promo--small">
+            <a class="nhsuk-promo__link-wrapper" href="mailto:officeofthesiro@nhs.net">
+              <div class="nhsuk-promo__content">
+                <h3 class="nhsuk-promo__heading">I want to find more information:</h3>
+                <p class="nhsuk-promo__description">Contact office of the SIRO</p>
+              </div>
+            </a>
+          </div>
         </div>
-      </a>
+         <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+          <div class="nhsuk-promo nhsuk-promo--small">
+            <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Pages/Getting-PRepared-for-new-data-protection-law.aspx">
+              <div class="nhsuk-promo__content">
+                <h3 class="nhsuk-promo__heading">I want more guidance:</h3>
+                <p class="nhsuk-promo__description">The steps are set out in “Information Assets &
+        GDPR: A Step by Step Guide”</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        </div>
+
     </div>
   </div>
 </div>

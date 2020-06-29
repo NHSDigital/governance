@@ -1,99 +1,115 @@
 {% set pageTitle = "Information" %}
-{% set pageDescription = "Don’t waste time searching high and low for content or creating material from scratch which may already exists" %}
+{% set pageDescription = "Don’t waste time searching high and low for content or creating material from scratch which may already exist." %}
 
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
+  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      {%- for item in params.items %}
+        {%- if item.href %}
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
+        {%- endif -%}
+      {% endfor %}
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
+    </ol>
+  </div>
+  </nav>
+{% endblock %}
+
+
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        <div class="app-pane">
+          {% include "./includes/_information-side-navigation.njk" %}
         </div>
+      </div>
+      <div class="app-pane__main-content">
+        <h1 class="app-page-heading">{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+        <p>Simply select the technology area you are interested in below and we will
+        guide you to all relevant related information including guiding principles,
+        strategies, policies, standards, patterns, applications, CCCs and approved
+        technology stacks. And if you still can’t find what you need, we will show you
+          who you need to talk to.</p>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/information/data">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about Data</h3>
+                  <p class="nhsuk-promo__description">Data</p>
+                </div>
+              </a>
+            </div>
+          </div>
+           <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/information/platform-and-infrastructure">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about Platform and Infrastructure:</h3>
+                  <p class="nhsuk-promo__description">Platform and Infrastructure</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/information/interop">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about Interoperability:</h3>
+                  <p class="nhsuk-promo__description">Interoperability</p>
+                </div>
+              </a>
+            </div>
+          </div>
+           <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://service-manual.nhs.uk">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to design and build digital services for the NHS:</h3>
+                  <p class="nhsuk-promo__description">Digital and UX</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://aalto.digital.nhs.uk/#/runView/?viewId=15bf84d2-5f93-41dc-a043-e9386806f918&library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about technology standards:</h3>
+                  <p class="nhsuk-promo__description">We have pre-approved Technology Standards in place, including Public Cloud (AWS and Azure) and On Premise Standards. As these do change and get updated regularly, please refer to the current Standards on the EA Portal.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+           <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://aalto.digital.nhs.uk/#/search?noQuery=true&types=300&viewMode=1&library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about a specific Capability:</h3>
+                  <p class="nhsuk-promo__description">Capabilities</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</section>
-{% endblock %}
-
-{% block body %}
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2>information Home</h2>
-    <p>Simply select the technology area you are interested in below and we will guide you to all relevant related information including guiding principles, strategies, policies, standards, patterns, applications, CCCs and approved technology stacks. And if you still can’t find what you need, we will show you who you need to talk to.</p>
-  </div>
-
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/information/data">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find information about a specific technology area:</h3>
-          <p class="nhsuk-promo__description">Data</p>
-        </div>
-      </a>
-    </div>
-  </div>
-   <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/information/platform-and-infrastructure">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find information about a specific technology area:</h3>
-          <p class="nhsuk-promo__description">Platform and Infrastructure</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/information/interop">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find information about a specific technology area:</h3>
-          <p class="nhsuk-promo__description">Interoperability</p>
-        </div>
-      </a>
-    </div>
-  </div>
-   <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="https://service-manual.nhs.uk">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to Design and build digital services for the NHS:</h3>
-          <p class="nhsuk-promo__description">Digital and UX</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="https://aalto.digital.nhs.uk/#/runView/?viewId=15bf84d2-5f93-41dc-a043-e9386806f918&library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find information about technology standards:</h3>
-          <p class="nhsuk-promo__description">We have pre-approved Technology Standards in place, including Public Cloud (AWS and Azure) and On Premise Standards. As these do change and get updated regularly, please refer to the current Standards on the EA Portal</p>
-        </div>
-      </a>
-    </div>
-  </div>
-   <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="https://aalto.digital.nhs.uk/#/search?noQuery=true&types=300&viewMode=1&library=5464c07f-daf1-4eee-b9b6-22e6c4dfbbd0">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find information about a specific Capability:</h3>
-          <p class="nhsuk-promo__description">Capabilities</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
 {% endblock %}
