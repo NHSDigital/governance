@@ -9,14 +9,8 @@ come without risk." %}
   {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      {%- for item in params.items %}
-        {%- if item.href %}
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
-        {%- endif -%}
-      {% endfor %}
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Information</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information/cloud" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Cloud</a></li>
     </ol>
   </div>
   </nav>
@@ -41,7 +35,7 @@ come without risk." %}
         Security Centre Cloud Security Principles), the <a href="https://enterprisearchitecture.digital.nhs.uk/system/files/Cloud%20Hosting%20Policy%20V3_0.pdf">Public
         Cloud and Co-Location Infrastructure Platforms
         Policy</a> will help you understand the risks and the
-        relevant controls to mitigate these. </p>
+        relevant controls to mitigate these.</p>
 
           <h3>Does this apply to me?</h3>
         This policy applies to anyone involved in the
@@ -61,67 +55,68 @@ come without risk." %}
 
         <h3>What does the Public Cloud and Co-location Infrastructure Platforms Policy cover?</h3>
         <ol>
-        <li>Regulatory requirements
-        <li>Data Risk Assessment classifications
-        <li>Minimum documentation standards and principles
-        <li>Approval flow for cloud services
-        <li>Governance
-        <li>Selecting and working with the appropriate cloud
-        <ul><li>Guidance on migrating existing/legacy services to Public Cloud
-        <li>Guidance on developing NEW services in Public Cloud
-        </ul>
-
+          <li>Regulatory requirements</li>
+          <li>Data Risk Assessment classifications</li>
+          <li>Minimum documentation standards and principles</li>
+          <li>Approval flow for cloud services</li>
+          <li>Governance</li>
+          <li>Selecting and working with the appropriate cloud</li>
+          <ul>
+            <li>Guidance on migrating existing/legacy services to Public Cloud</li>
+            <li>Guidance on developing NEW services in Public Cloud</li>
+         </ul>
         </ol>
         <h3>Is it known by another name</h3>
         <p>Yes. You may also have heard this policy called the Public Cloud First Policy,
         the Cloud Hosting Policy or Public Cloud Access from NHS Private Network.
         They are all the same thing.</p>
 
-      <div class="nhsuk-grid-row nhsuk-promo-group">
-        <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-          <div class="nhsuk-promo nhsuk-promo--small">
-            <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Design-Guidance.aspx">
-              <div class="nhsuk-promo__content">
-                <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
-                <p class="nhsuk-promo__description">Cloud Design Guidance</p>
-              </div>
-            </a>
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Design-Guidance.aspx">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
+                  <p class="nhsuk-promo__description">Cloud Design Guidance</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-IP-Addressing.aspx">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
+                  <p class="nhsuk-promo__description">Cloud Security Guidance</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-         <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-          <div class="nhsuk-promo nhsuk-promo--small">
-            <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-IP-Addressing.aspx">
-              <div class="nhsuk-promo__content">
-                <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
-                <p class="nhsuk-promo__description">Cloud Security Guidance</p>
-              </div>
-            </a>
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Security-Guidance.aspx">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
+                  <p class="nhsuk-promo__description">Cloud IP Addreessing</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>
-        <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-          <div class="nhsuk-promo nhsuk-promo--small">
-            <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Security-Guidance.aspx">
-              <div class="nhsuk-promo__content">
-                <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
-                <p class="nhsuk-promo__description">Cloud IP Addreessing</p>
-              </div>
-            </a>
-          </div>
-         </div>
-         <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-          <div class="nhsuk-promo nhsuk-promo--small">
-            <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Monitoring-Guidance.aspx">
-              <div class="nhsuk-promo__content">
-                <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
-                <p class="nhsuk-promo__description">Cloud Monitoring Guidance</p>
-              </div>
-            </a>
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Cloud-Monitoring-Guidance.aspx">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find information about specific cloud guidance:</h3>
+                  <p class="nhsuk-promo__description">Cloud Monitoring Guidance</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
-      </div>
     </div>
   </div>
-
+</div>
 {% endblock %}

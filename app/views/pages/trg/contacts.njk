@@ -8,14 +8,8 @@
   {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      {%- for item in params.items %}
-        {%- if item.href %}
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
-        {%- endif -%}
-      {% endfor %}
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>TRG</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg/contacts"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Contacts</a></li>
     </ol>
   </div>
   </nav>
@@ -86,7 +80,7 @@
           <a class="nhsuk-promo__link-wrapper" href="mailto:trg.mailbox@nhs.net">
             <div class="nhsuk-promo__content">
               <h3 class="nhsuk-promo__heading">Who can I contact about TRG:</h3>
-              <p class="nhsuk-promo__description">Chair: Rob Sinclair </br>
+              <p class="nhsuk-promo__description">Chair: Rob Sinclair <br>
                 Secretariat: Laura Fenton</p>
             </div>
           </a>

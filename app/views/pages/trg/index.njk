@@ -8,11 +8,6 @@
   {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      {%- for item in params.items %}
-        {%- if item.href %}
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
-        {%- endif -%}
-      {% endfor %}
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>TRG</a></li>
     </ol>
@@ -53,10 +48,10 @@
 
     <ul>
       <li>The TRG are not there to increase workload or complexity – rather the opposite.
-      We ensure scalability and flexibility but with the necessary controls.
+      We ensure scalability and flexibility but with the necessary controls.</li>
       <li>This process helps make sure the right decisions are being made at the right time.
       Protecting public spending and providing a level of confidence in the programmes
-      being launched to reduce risk of failure.
+      being launched to reduce risk of failure.</li>
     </ul>
 
     <h2>What do I need to take to TRG?</h2>
@@ -102,7 +97,7 @@
             <div class="nhsuk-promo__content">
               <h3 class="nhsuk-promo__heading">Who can I contact about TRG:</h3>
               <p class="nhsuk-promo__description">
-                Chair: Rob Sinclair</br>
+                Chair: Rob Sinclair<br>
                 Secretariat: Laura Fenton</p>
             </div>
           </a>
@@ -134,6 +129,7 @@
     </div>
 
     </div>
+     </div>
   </div>
 </div>
 {% endblock %}

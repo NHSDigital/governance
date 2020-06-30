@@ -8,15 +8,10 @@
   {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      {%- for item in params.items %}
-        {%- if item.href %}
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
-        {%- endif -%}
-      {% endfor %}
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance/eab"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>{{ pageTitle }}</a></li>
     </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/">Back Home</a></p>
   </div>
   </nav>
 {% endblock %}
@@ -69,8 +64,8 @@
           <div class="nhsuk-promo__content">
             <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
             <p class="nhsuk-promo__description">
-              EA Team</br>
-              Chair: James Hawkins</br>
+              EA Team<br>
+              Chair: James Hawkins<br>
             Secretariat: Louise Hill
             </p>
           </div>

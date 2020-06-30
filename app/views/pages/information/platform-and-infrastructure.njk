@@ -8,14 +8,8 @@
   {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      {%- for item in params.items %}
-        {%- if item.href %}
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a>{% if not loop.last %}{% endif %}</li>
-        {%- endif -%}
-      {% endfor %}
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Information</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information/platform-and-infrastructure" {% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Platform and Infrastructure</a></li>
     </ol>
   </div>
   </nav>
