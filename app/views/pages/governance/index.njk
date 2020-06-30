@@ -10,8 +10,7 @@
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
       <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Governance</a></li>
-    </ol>
+      </ol>
     <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/">Back Home</a></p>
   </div>
   </nav>
@@ -23,9 +22,7 @@
       <div class="nhsuk-grid-column-full app-component-reading-width">
         <div class="app-pane">
           <div class="app-pane__side-bar">
-            <div class="app-pane">
               {% include "./includes/_governance-side-navigation.njk" %}
-            </div>
           </div>
           <div class="app-pane__main-content">
           <h1 class="app-page-heading">{{ pageTitle }}</h1>
