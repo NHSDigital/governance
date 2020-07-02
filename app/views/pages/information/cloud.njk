@@ -1,6 +1,5 @@
-{% set pageTitle = "Platform and Infrastructure - Cloud" %}
-{% set pageDescription = "Developing services within the public cloud does not
-come without risk." %}
+{% set pageTitle = "Cloud" %}
+{% set pageDescription = "Developing services within the public cloud does not come without risk." %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -27,7 +26,7 @@ come without risk." %}
       <div class="app-pane__main-content">
         <h1>{{ pageTitle }}</h1>
         <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
-        <h2>Platform and Infrastructure - Cloud</h2>
+
         <p>Designed to align with and comply
         with existing national best practice (National Cyber
         Security Centre Cloud Security Principles), the <a href="https://enterprisearchitecture.digital.nhs.uk/system/files/Cloud%20Hosting%20Policy%20V3_0.pdf">Public
@@ -35,20 +34,21 @@ come without risk." %}
         Policy</a> will help you understand the risks and the
         relevant controls to mitigate these.</p>
 
-          <h3>Does this apply to me?</h3>
-        This policy applies to anyone involved in the
+        <h3>Does this apply to me?</h3>
+        <p>This policy applies to anyone involved in the
         governance, commissioning, design, development
-        or delivery of NHS Digital services
+        or delivery of NHS Digital services</p>
+
         <h3>What is it?</h3>
         <ul>
-        <li>It provides guidance and clarification on the controls that must be implemented to
+          <li>It provides guidance and clarification on the controls that must be implemented to
         provide a secure approach to providing access and transfer capabilities between the
-        NHS private network environment and public cloud platforms.
-        <li>It defines our risk appetite (in line with the Data Risk Assessment guidance) and
+        NHS private network environment and public cloud platforms.</li>
+          <li>It defines our risk appetite (in line with the Data Risk Assessment guidance) and
         the constraints that you should apply when using public cloud for hosting services
         and applications. It will help you understand the necessary constraints and the
         expectations programmes and functions will have to provide for cloud services
-        once their data classification is identified.
+        once their data classification is identified.</li>
         </ul>
 
         <h3>What does the Public Cloud and Co-location Infrastructure Platforms Policy cover?</h3>
@@ -59,11 +59,12 @@ come without risk." %}
           <li>Approval flow for cloud services</li>
           <li>Governance</li>
           <li>Selecting and working with the appropriate cloud</li>
-          <ul>
+          <ol>
             <li>Guidance on migrating existing/legacy services to Public Cloud</li>
             <li>Guidance on developing NEW services in Public Cloud</li>
-         </ul>
+          </ol>
         </ol>
+
         <h3>Is it known by another name</h3>
         <p>Yes. You may also have heard this policy called the Public Cloud First Policy,
         the Cloud Hosting Policy or Public Cloud Access from NHS Private Network.
@@ -114,8 +115,8 @@ come without risk." %}
           </div>
         </div>
 
+      </div>
     </div>
   </div>
-</div>
 </div>
 {% endblock %}
