@@ -73,4 +73,9 @@ router.get('/trg/contacts', (req, res) => {
   res.render('pages/trg/contacts');
 });
 
+router.get('/cookie-policy', (req, res) => {
+  res.render('pages/cookie-policy');
+});
+
+
 module.exports = router;

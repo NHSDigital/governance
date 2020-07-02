@@ -22,8 +22,9 @@
     <meta name="msapplication-square310x310logo" content="/assets/favicons/largetile-310x310.png">
 
     <link rel="stylesheet" href="/css/main.min.css">
-
-    <script src="/js/main.bundle.min.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <!-- Cookie consent -->
+    <script src="/scripts/cookie-consent.js" data-policy-url="/cookie-policy" type="text/javascript"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170636360-1"></script>
     <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-170636360-1');</script>
@@ -36,7 +37,7 @@
     {% block outerBody %}{% endblock %}
 
     <div class="nhsuk-width-container">
-      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
         {% block body %}{% endblock %}
       </main>
     </div>
