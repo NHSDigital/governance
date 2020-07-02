@@ -77,5 +77,8 @@ router.get('/cookie-policy', (req, res) => {
   res.render('pages/cookie-policy');
 });
 
+router.get('/cookie-confirmation', (req, res) => {
+  res.render('pages/cookie-confirmation');
+});
 
 module.exports = router;
