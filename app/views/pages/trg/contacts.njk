@@ -4,15 +4,15 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-  <nav class="nhsuk-breadcrumb{% if params.classes %} {{ params.classes }}{% endif %}" aria-label="Breadcrumb"
-  {%- for attribute, value in params.attributes %} {{attribute}}="{{value}}"{% endfor %}>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>Home</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg"{% for attribute, value in item.attributes %} {{attribute}}="{{value}}"{% endfor %}>TRG</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg">TRG</a></li>
     </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/trg">TRG</a></p>
   </div>
-  </nav>
+</nav>
 {% endblock %}
 
 {% block body %}
