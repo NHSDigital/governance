@@ -48,8 +48,8 @@ router.get('/governance/cpo', (req, res) => {
   res.render('pages/governance/cpo');
 });
 
-router.get('/governance/live-services-board', (req, res) => {
-  res.render('pages/governance/live-services-board');
+router.get('/governance/lsb', (req, res) => {
+  res.render('pages/governance/lsb');
 });
 router.get('/governance/platform-board', (req, res) => {
   res.render('pages/governance/platform-board');
@@ -68,4 +68,17 @@ router.get('/information/data', (req, res) => {
 router.get('/information/interop', (req, res) => {
   res.render('pages/information/interop');
 });
+
+router.get('/trg/contacts', (req, res) => {
+  res.render('pages/trg/contacts');
+});
+
+router.get('/cookie-policy', (req, res) => {
+  res.render('pages/cookie-policy');
+});
+
+router.get('/cookie-confirmation', (req, res) => {
+  res.render('pages/cookie-confirmation');
+});
+
 module.exports = router;

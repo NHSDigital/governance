@@ -4,51 +4,76 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
-        </div>
-      </div>
-    </div>
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance">Governance</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/governance">Governance</a></p>
   </div>
-</section>
+</nav>
 {% endblock %}
 
+
 {% block body %}
-
 <div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-one-third">
-    {% include "./includes/_side-navigation.njk" %}
-  </div>
-  <div class="nhsuk-grid-column-two-thirds">
-    <h2>EAB</h2>
-    <h3>What is the role of EAB and how does it help my project?</h3>
-    <p>The EAB ensures enterprise-wide strategic coordination across the national health
-    and social care organisations. It helps by providing strategic direction, governance
-    and assurance.</p>
-    <h3>What is the scope of EAB?</h3>
-    <ul>
-    <li>Programmes and initiatives overseen by the Digital Delivery Board;
-    <li>Other programmes being delivered by NHS Digital;
-    <li>Other programmes being delivered across national Health
-    and Social Care bodies where the focus is on national
-    capability or where they is a clear interface between
-    national and local capabilities.
-    </ul>
+  <div class="nhsuk-grid-column-full">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+          {% include "./includes/_governance-side-navigation.njk" %}
+      </div>
+      <div class="app-pane__main-content">
+        <h1>{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
 
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="mailto:ea-da@nhs.net">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
-          <p class="nhsuk-promo__description">EA Team</p>
+        <h2>What is the role of the EAB and how does it help my project?</h2>
+        <p>The EAB ensures enterprise-wide strategic coordination across the national health
+        and social care organisations. It helps by providing strategic direction, governance
+        and assurance.</p>
+
+        <h2>What is the scope of the EAB?</h2>
+        <ul>
+          <li>Programmes and initiatives overseen by the Digital Delivery Board;</li>
+          <li>Other programmes being delivered by NHS Digital;</li>
+          <li>Other programmes being delivered across national Health</li>
+          and Social Care bodies where the focus is on national</li>
+          capability or where there is a clear interface between</li>
+          national and local capabilities.</li>
+        </ul>
+
+        <h2>How do I check what's been approved?</h>
+        <p><a href=" https://hscic365.sharepoint.com/sites/Architecture/ARCHGOVBDS/Lists/Decisions%20Log">The Architecture Governance Board Decision Log</a></p>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="https://hscic365.sharepoint.com/sites/Architecture/ARCHGOVBDS/Lists/Templates/AllItems.aspx">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">The Architecture Governance Board's template library</h3>
+                  <p class="nhsuk-promo__description">Take me to the documents I need to complete to submit something to the EAB</p>
+                </div>
+              </a>
+            </div>
         </div>
-      </a>
-    </div>
+        <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+          <div class="nhsuk-promo nhsuk-promo--small">
+            <a class="nhsuk-promo__link-wrapper" href="mailto:ea-da@nhs.net">
+              <div class="nhsuk-promo__content">
+                <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+                <p class="nhsuk-promo__description">
+                  EA Team<br>
+                  Chair: James Hawkins<br>
+                Secretariat: Louise Hill
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
 
+  </div>
+</div>
   </div>
 </div>
 {% endblock %}

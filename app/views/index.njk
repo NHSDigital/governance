@@ -1,89 +1,81 @@
+{% set pageTitle = "Technical Review and Governance" %}
+{% set pageDescription = "The role of the TRG is to provide technical reviews and governance across the delivery lifecycle of all NHS Digital projects. We ensure that the right criteria are being met (principles, strategies, policies, standards and guidance) at every step of the way from Discovery stage to Go Live." %}
+
 {% extends 'includes/layout.njk' %}
 
-{% block outerBody %}
-<section class="nhsuk-hero">
-  <div class="nhsuk-width-container nhsuk-hero--border">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">Technical Review Group and Governance</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">Helping technical architects and project professionals to navigate our technical governance process.</p>
+{% block body %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-u-reading-width">
+
+        <h1>{{ pageTitle }}</h1>
+        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+
+        <h2 id="how-this-manual-could-help-you">How this manual could help you</h2>
+        <p>As a Technical Architect or Project lead:</p>
+        <ul>
+          <li>You need the most current and relevant information and content to ensure you can deliver effectively.</li>
+          <li>You need to understand the correct governance processes you need to follow and who you can speak to for help and support.</li>
+          <li>Most importantly you need to be able to see what has already been done; pre-approved standards, policies and principles to form application development and architectural decisions.</li>
+        </ul>
+        <p><strong>The result?</strong> You can develop and launch projects faster and more efficiently to improve the lives of patients, clinicians and NHS workers, ensuring public money doesn’t get wasted through duplicating efforts and creating a documented audit trail of your governance journey.</p>
+        <p>This manual is designed to help all technical and/or project professionals get to the right information faster through guided navigation. Simply select what you want to achieve either from the homepage or using the side navigation and let the manual take you to the relevant content.</p>
+        <p>Where available, we will also recommend additional information or resources which might be useful to you and your job.</p>
+        <p>If you have any content you would like to add or update within the manual, please email your request to <a href="mailto:trg.mailbox@nhs.net">trg.mailbox@nhs.net</a>.
+
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-three-quarters">
+            <h2 id="what-do-you-want-to-do-today">What do you want to do today?</h2>
+          </div>
         </div>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/#page">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find a specific principle, strategy, policy or standard</h3>
+                  <p class="nhsuk-promo__description">Helping me deliver projects faster. Avoid wastage. Creating consistency.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/#page-1">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I know something exists. I want to find out if it is suitable for me to re-use it</h3>
+                  <p class="nhsuk-promo__description">Saving me development time and effort. Helping create a joined-up organisation.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nhsuk-grid-row nhsuk-promo-group">
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/#page-2">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I can't find anything fit-for-purpose. I want to understand ongoing developments in other programmes that might be of use and if there is anything pre-approved</h3>
+                  <p class="nhsuk-promo__description">Making sure I don't duplicate development. Reducing time spent in governance.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+            <div class="nhsuk-promo nhsuk-promo--small">
+              <a class="nhsuk-promo__link-wrapper" href="/trg">
+                <div class="nhsuk-promo__content">
+                  <h3 class="nhsuk-promo__heading">I want to find out how to take a project through governance</h3>
+                  <p class="nhsuk-promo__description">Making sure I go to the right board at the right time. Saving my efforts, and NHS money, if approval has already been given.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</section>
 {% endblock %}
-
-{% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-<h2 id="how-this-manual-could-help-you">How this manual could help you</h2>
-    <p>As a Technical Architect or Project lead:</p>
-    <ul>
-      <li>You need the most current and relevant information and content to ensure you can deliver effectively</li>
-      <li>You need to understand the correct governance processes you need to follow and who you can speak to for help and support</li>
-      <li>Most importantly you need to be able to see what has already been done; pre-approved standards, policies and principles to form application development and architectural decisions</li>
-    </ul>
-    <p><strong>The result?</strong> You can develop and launch projects faster and more efficiently to improve the lives of patients, clinicians and NHS workers. Ensuring public money doesn’t get wasted through duplicating efforts and creating a documented audit trail of your governance journey.</p>
-    <p>This eBook is designed to help all technical and/or project professionals get to the right information faster through guided navigation. Simply select what you want to achieve either from the homepage or using the side navigation and let the eBook take you to the relevant content.</p>
-    <p>Where available, we will also recommend additional information or resources which might be useful to you and your job.</p>
-    <p>If you have any content you would like to add or update within the eBook, please email your request to <a href="mailto:trg.mailbox@nhs.net">trg.mailbox@nhs.net</a>.
-  </div>
-</div>
-
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-three-quarters">
-    <h2 id="what-do-you-want-to-do-today">What do you want to do today?</h2>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/#page">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find a specific principle, strategy, policy or standard</h3>
-          <p class="nhsuk-promo__description">Helping me deliver projects faster. Avoid wastage. Creating consistency.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/#page-1">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I know something exists. I want to find out if it is suitable for me to re-use it</h3>
-          <p class="nhsuk-promo__description">Saving me development time and effort. Helping create a joined-up organisation.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="nhsuk-grid-row nhsuk-promo-group">
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/#page-2">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I can't find anything fit-for-purpose. I want to understand ongoing developments in other programmes that might be of use and if there is anything pre-approved</h3>
-          <p class="nhsuk-promo__description">Making sure I don't duplicate development. Reducing time spent in governance.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-    <div class="nhsuk-promo nhsuk-promo--small">
-      <a class="nhsuk-promo__link-wrapper" href="/trg">
-        <div class="nhsuk-promo__content">
-          <h3 class="nhsuk-promo__heading">I want to find out how to take a project through governance</h3>
-          <p class="nhsuk-promo__description">Making sure I go to the right board at the right time. Saving my efforts, and NHS money, if approval has already been given.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
- 
-
-</div>
-   {% endblock %}

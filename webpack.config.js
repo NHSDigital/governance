@@ -1,18 +1,12 @@
 // External dependencies
 const path = require('path');
 
-// Local dependencies
-const config = require('./app/config');
-
 module.exports = {
-  mode: config.env,
   entry: {
+    cookies: './app/scripts/cookie-consent.js',
     main: './app/scripts/main.js',
   },
-  output: {
-    filename: 'main.bundle.min.js',
-    path: path.resolve(__dirname, 'public/js'),
-  },
+  mode: 'production',
   module: {
     rules: [{
       test: /\.js$/,
@@ -24,8 +18,11 @@ module.exports = {
       },
     }],
   },
+  output: {
+    filename: '[name].min.js',
+    path: path.resolve(__dirname, 'public/js/'),
+  },
   watchOptions: {
     ignored: /node_modules/,
   },
-  devtool: 'source-map',
 };
