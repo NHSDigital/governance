@@ -4,6 +4,19 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -23,9 +36,6 @@
           {% include "./includes/_information-side-navigation.njk" %}
       </div>
       <div class="app-pane__main-content">
-        <h1>{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
-
         <p>At present 30+ infrastructure platforms exist across NHS Digital. In an effort to bring
         together new thinking and current initiatives, we have developed the <a href="https://hscic365.sharepoint.com/Platforms_and_Infrastructure/Pages/Platform-Strategy.aspx"> Infrastructure
         Platform Strategy.</a></p>

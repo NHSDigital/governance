@@ -5,6 +5,19 @@ guidelines around the use of information and data within the NHS." %}
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -25,10 +38,6 @@ guidelines around the use of information and data within the NHS." %}
           {% include "./includes/_information-side-navigation.njk" %}
       </div>
       <div class="app-pane__main-content">
-        <h1>{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
-        <p>It is really important that you familiarise yourself with these in order to remain both compliant but also keep you in line with the NHS code of practice on confidential information.</p>
-
         <h2>Does this apply to me?</h2>
         <p>The principles apply to anyone developing anything that involves the collection, use, sharing and storage of information and data.</p>
         <p>If you are working on anything related to data, you will also need to complete a Data Processing Impact Assessment (DPIA) and, if you are hosting in the Cloud, a Cloud Risk score.</p>

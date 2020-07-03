@@ -4,71 +4,80 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance">Governance</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/governance">Governance</a></p>
-  </div>
-</nav>
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/governance">Governance</a>
+        </li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/governance">Governance</a>
+      </p>
+    </div>
+  </nav>
 {% endblock %}
 
 {% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="app-pane">
-      <div class="app-pane__side-bar">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="app-pane">
+        <div class="app-pane__side-bar">
           {% include "./includes/_governance-side-navigation.njk" %}
-      </div>
-      <div class="app-pane__main-content">
-        <h1>{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+        </div>
+        <div class="app-pane__main-content">
+          <h2>What is the role of the DDA and how does it help my project?</h2>
+          <p>DDA is empowered by, and operates as a sub-group of, the Enterprise Architecture Board (EAB) with devolved responsibility for:</p>
+          <ul>
+            <li>Commissioning and approving the development of Architectural Principles, Policies, Strategies and Standards for Data which are clearly aligned to the desired business outcomes of NHS Digital and the Digital Delivery Board;</li>
+            <li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards are maintained;</li>
+            <li>Collaborating with other external Data Strategy and Standards bodies to ensure that system-wide consistency is maintained;</li>
+            <li>Establishing a Data Architecture that is appropriate for system-wide adoption;</li>
+            <li>Providing strategic oversight for the design and maintenance of a national reference data architecture and associated architectural assets;</li>
+            <li>Providing leadership for the transformation and standardisation of data architecture;<li>
+            <li>Delivering semantic interoperability for direct care;</li>
+            <li>Acting as an escalation point for issues of Data and Information policies, strategies and standards.</li>
+          </ul>
 
-        <h2>What is the role of the DDA and how does it help my project?</h2>
-        <p>DDA is empowered by, and operates as a sub-group of, the Enterprise Architecture Board (EAB) with devolved responsibility for:</p>
-        <ul>
-          <li>Commissioning and approving the development of Architectural Principles, Policies,
-        Strategies and Standards for Data which are clearly aligned to the desired business
-        outcomes of NHS Digital and the Digital Delivery Board;</li>
-          <li>Collaborating with other Design Authority Boards to ensure a coherent and cohesive
-        Enterprise Architecture, Architectural Principles, Policies, Strategies and Standards
-        are maintained;</li>
-          <li>Collaborating with other external Data Strategy and Standards bodies to ensure that
-        system-wide consistency is maintained;</li>
-          <li>Establishing a Data Architecture that is appropriate for system-wide adoption;
-          <li>Providing strategic oversight for the design and maintenance of a national reference
-        data architecture and associated architectural assets;</li>
-          <li>Providing leadership for the transformation and standardisation of data architecture;
-          <li>Delivering semantic interoperability for direct care;</li>
-          <li>Acting as an escalation point for issues of Data and Information policies, strategies
-        and standards.</li>
-      </ul>
-
-      <h2>What is the scope of DDA?</h2>
-      <ul>
-        <li>Programmes and initiatives overseen by the Digital Delivery Board;</li>
-        <li>Local Health and Care Record Exemplars;</li>
-        <li>Other programmes being delivered by NHS Digital;</li>
-        <li>As instructed, other programmes being delivered across national Health and
+          <h2>What is the scope of DDA?</h2>
+          <ul>
+            <li>Programmes and initiatives overseen by the Digital Delivery Board;</li>
+            <li>Local Health and Care Record Exemplars;</li>
+            <li>Other programmes being delivered by NHS Digital;</li>
+            <li>As instructed, other programmes being delivered across national Health and
             Social Care bodies where the focus is on national capability or where there is
             a clear interface between national and local capabilities.</li>
-      </ul>
+          </ul>
 
-        <div class="nhsuk-promo nhsuk-promo--small">
-          <a class="nhsuk-promo__link-wrapper" href="mailto:ginger.buckland@nhs.net">
-            <div class="nhsuk-promo__content">
-              <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
-              <p class="nhsuk-promo__description">
+          <div class="nhsuk-promo nhsuk-promo--small">
+            <a class="nhsuk-promo__link-wrapper" href="mailto:ginger.buckland@nhs.net">
+              <div class="nhsuk-promo__content">
+                <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+                <p class="nhsuk-promo__description">
                 Secretariat: Ginger Buckland<br>
-              </p>
-            </div>
-          </a>
-        </div>
+                </p>
+              </div>
+            </a>
+          </div>
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 {% endblock %}

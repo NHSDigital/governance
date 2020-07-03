@@ -4,6 +4,19 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -23,9 +36,6 @@
           {% include "./includes/_trg-side-navigation.njk" %}
       </div>
       <div class="app-pane__main-content">
-        <h1 class="app-page-heading">{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
-
         <h2>Taking Something through the TRG</h2>
         <p>We are required, by the Government, to provide fully audited and traceable governance of all the services we at NHS Digital deliver. TRG is how we do this for technology.
         The role of the TRG is to provide technical reviews and governance across the delivery lifecycle of all NHS Digital projects. We ensure that the right criteria are being met

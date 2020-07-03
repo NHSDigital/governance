@@ -8,20 +8,12 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
-router.get('/background', (req, res) => {
-  res.render('pages/background/index');
-});
-
 router.get('/trg', (req, res) => {
   res.render('pages/trg/index');
 });
 
 router.get('/information', (req, res) => {
   res.render('pages/information/index');
-});
-
-router.get('/portfolio', (req, res) => {
-  res.render('pages/portfolio/index');
 });
 
 router.get('/governance', (req, res) => {

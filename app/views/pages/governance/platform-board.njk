@@ -4,39 +4,55 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/governance">Governance</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/governance">Governance</a></p>
-  </div>
-</nav>
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/governance">Governance</a>
+        </li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/governance">Governance</a>
+      </p>
+    </div>
+  </nav>
 {% endblock %}
 
 {% block body %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-full">
-    <div class="app-pane">
-      <div class="app-pane__side-bar">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="app-pane">
+        <div class="app-pane__side-bar">
           {% include "./includes/_governance-side-navigation.njk" %}
-      </div>
-      <div class="app-pane__main-content">
-        <h1>{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
+        </div>
+        <div class="app-pane__main-content">
+          <h2>Platform Board</h2>
+          <p>The Platform Board provides specific governance around infrastructure and platform choices, especially around the use of Cloud platforms. The model is driven by the result of a <a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/nhs-and-social-care-data-off-shoring-and-the-use-of-public-cloud-services/health-and-social-care-data-risk-model">cloud risk assessment</a> that programmes undertake.</p>
+          <ul>
+            <li>For activities at Classes I and II: TRG must be approached for approval directly.</li>
+            <li>For activities at Classes III, IV and V: Platform Board must be approached for approval, and will expect activities to have been supported through TRG.</li>
+          </ul>
 
-        <h2>Platform Board</h2>
-        <p>The Platform Board provides specific governance around infrastructure and platform choices, especially around the use of Cloud platforms. The model is driven by the result of a <a href="https://digital.nhs.uk/data-and-information/looking-after-information/data-security-and-information-governance/nhs-and-social-care-data-off-shoring-and-the-use-of-public-cloud-services/health-and-social-care-data-risk-model">cloud risk assessment</a> that programmes undertake.</p>
-        <ul>
-          <li>For activities at Classes I and II: TRG must be approached for approval directly.</li>
-          <li>For activities at Classes III, IV and V: Platform Board must be approached for approval, and will expect activities to have been supported through TRG.</li>
-        </ul>
-
-        <div class="nhsuk-grid-row nhsuk-promo-group">
-          <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
-            <div class="nhsuk-promo nhsuk-promo--small">
-              <a class="nhsuk-promo__link-wrapper" href="https://estore.hscic.gov.uk/Store?tab=MyStore&id=0d524b44-5abc-4267-9407-b2683ff5bc26"</a>
+          <div class="nhsuk-grid-row nhsuk-promo-group">
+            <div class="nhsuk-grid-column-one-half nhsuk-promo-group__item">
+              <div class="nhsuk-promo nhsuk-promo--small">
+                <a class="nhsuk-promo__link-wrapper" href="https://estore.hscic.gov.uk/Store?tab=MyStore&id=0d524b44-5abc-4267-9407-b2683ff5bc26"</a>
                 <div class="nhsuk-promo__content">
                   <h3 class="nhsuk-promo__heading">Engagement form:</h3>
                   <p class="nhsuk-promo__description">

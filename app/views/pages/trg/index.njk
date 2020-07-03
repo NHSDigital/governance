@@ -4,6 +4,19 @@
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
@@ -22,9 +35,6 @@
           {% include "./includes/_trg-side-navigation.njk" %}
       </div>
       <div class="app-pane__main-content">
-        <h1>{{ pageTitle }}</h1>
-        <p class="nhsuk-lede-text app-lede-text">{{ pageDescription }}</p>
-
         <h2 id="the-role-of-trg">The role of TRG</h2>
         <p>TRG is the Technical Review and Governance group and is made up of technical experts from across our organisation. It meets every first and third Wednesday each month.</p>
         <p>TRG provides technical governance by ensuring that all developments and activities align to published policies, principles, patterns and standards.</p>
