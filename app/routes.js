@@ -35,18 +35,15 @@ router.get('/governance/dda', (req, res) => {
 router.get('/governance/bida', (req, res) => {
   res.render('pages/governance/bida');
 });
-
 router.get('/governance/cpo', (req, res) => {
   res.render('pages/governance/cpo');
 });
-
 router.get('/governance/lsb', (req, res) => {
   res.render('pages/governance/lsb');
 });
 router.get('/governance/platform-board', (req, res) => {
   res.render('pages/governance/platform-board');
 });
-
 router.get('/information/platform-and-infrastructure', (req, res) => {
   res.render('pages/information/platform-and-infrastructure');
 });
@@ -56,19 +53,45 @@ router.get('/information/cloud', (req, res) => {
 router.get('/information/data', (req, res) => {
   res.render('pages/information/data');
 });
-
+router.get('/information/glossary', (req, res) => {
+  res.render('pages/information/glossary');
+});
 router.get('/information/interop', (req, res) => {
   res.render('pages/information/interop');
 });
-
+router.get('/trg/sccc', (req, res) => {
+  res.render('pages/trg/sccc');
+});
+router.get('/trg/iccc', (req, res) => {
+  res.render('pages/trg/iccc');
+});
+router.get('/trg/ua', (req, res) => {
+  res.render('pages/trg/ua');
+});
+router.get('/trg/security', (req, res) => {
+  res.render('pages/trg/security');
+});
+router.get('/trg/interoperability', (req, res) => {
+  res.render('pages/trg/interoperability');
+});
+router.get('/trg/lss', (req, res) => {
+  res.render('pages/trg/lss');
+});
+router.get('/trg/development', (req, res) => {
+  res.render('pages/trg/development');
+});
+router.get('/trg/infrastructure', (req, res) => {
+  res.render('pages/trg/infrastructure');
+});
+router.get('/trg/dsa', (req, res) => {
+  res.render('pages/trg/dsa');
+});
 router.get('/trg/contacts', (req, res) => {
   res.render('pages/trg/contacts');
 });
-
 router.get('/cookie-policy', (req, res) => {
   res.render('pages/cookie-policy');
 });
-
 router.get('/cookie-confirmation', (req, res) => {
   res.render('pages/cookie-confirmation');
 });
