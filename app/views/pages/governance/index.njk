@@ -1,6 +1,6 @@
 {% set pageTitle = "Governance" %}
-{% set pageDescription = "Technical governance ensures we’re doing the right things and, doing them correctly.
- Our various boards are each responsible for their own part in this : " %}
+{% set pageDescription = "Technical governance ensures we’re doing the right things and, doing them
+correctly. Our various boards are each responsible for their own part in this" %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -45,39 +45,52 @@
             <li>Is it strategically aligned?</li>
             <li>Are the dependencies managed?</li>
             <li>Technology radar</li>
-            <li>Understanding and managing levels of debt</li>
+            <li>Understanding and managing levels of technical debt</li>
           </ul>
-
           <p>The Enterprise Architecture Board (EAB) oversees four design authorities who are responsible for maintaining those policies and standards:</p>
+          <ul>
+            <li><a href="/governance/bida">BIDA - Business Interoperability Design Authority</a></li>
+            <li><a href="/governance/aida">AIDA - Applications and Infrastructure Design Authority</a></li>
+            <li><a href="/governance/dda">DDA Data Design Authority</a></li>
+            <li><a href="/governance/cda">CDA The newly formed Cyber Design Authority</a></li>
+          </ul>
+          <p>There are also three more boards responsible for live services, portfolio and platforms</p>
+          <ul>
+            <li><a href="/governance/cpo">Central Portfolio</a></li>
+            <li><a href="/governance/live-services-board">Live Services Board</a></li>
+            <li><a href="/governance/platform-board">Platform Board</a></li>
+          </ul>
+          <h3>2. How do we build things right?</h3>
+          <p>Who is responsible for this? Design Authorities; Business Interoperability Design
+          Authority (BIDA), Applications and Infrastructure Design Authority (AIDA), Data Design
+          Authority (DDA), the newly formed CDA (Cyber Design Authority) and Platform Board</p>
+          <h4>What does it cover?</h4>
+          <p>The boards own, maintain and publish:/p>
+          <ul>
+            <li>Principles</li>
+            <li>Patterns</li>
+            <li>Standards</li>
+            <li>Policies</li>
+          </ul>
+          <h3>3. Are we doing it right?</h3>
+          <h4>Who is responsible for this? </h4>
+          <p>Technical Review and Governance (TRG), Live Services
+          Board</p>
+          <h4>What does it cover?</h4>
+          <p>The boards assures each programme and activity:</p>
+          <ul>
+            <li>Is it scalable/maintainable?</li>
+            <li>Has it been tested?</li>
+            <li>Is it suitable for live service?</li>
+            <li>Does it follow published standards, platforms and policies?</li>
+            <li>Is it aligned to our technology principles?</li>
+          </ul>
+          <p>The boards also identify needs for new standards and any potential overlap or
+          duplication by covering multiple cross-cutting concerns (CCCs)</p>
 
-          <ul>
-            <li>
-              <a href="/governance/bida">BIDA - Business Interoperability Design Authority</a>
-            </li>
-            <li>
-              <a href="/governance/aida">AIDA - Applications and Infrastructure Design Authority</a>
-            </li>
-            <li>
-              <a href="/governance/dda">DDA Data Design Authority</a>
-            </li>
-            <li>
-              <a href="/governance/cda">CDA The newly formed Cyber Design Authority</a>
-            </li>
-          </ul>
-          <p>There are also two more boards responsible for live services, portfolio and platforms</p>
-          <ul>
-            <li>
-              <a href="/governance/cpo">Central Portfolio Office</a>
-            </li>
-            <li>
-              <a href="/governance/live-services-board">Live Services Board</a>
-            </li>
-            <li>
-              <a href="/governance/platform-board">Platform Board</a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
   </div>
+
 {% endblock %}

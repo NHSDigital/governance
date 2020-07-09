@@ -1,0 +1,91 @@
+{% set pageTitle = "Glossary of Terms" %}
+{% set pageDescription = "Glossary of Terms" %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+<section class="nhsuk-hero">
+  <div class="nhsuk-width-container nhsuk-hero--border">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <div class="nhsuk-hero__wrapper">
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/information">Information</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/information">Information</a></p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+          {% include "./includes/_information-side-navigation.njk" %}
+      </div>
+      <div class="app-pane__main-content">
+
+        <div class="nhsuk-table-responsive">
+          <table class="nhsuk-table">
+            <caption class="nhsuk-table__caption">Glossary of Terms</caption>
+            <thead class="nhsuk-table__head">
+            <tr class="nhsuk-table__row">
+              <th class="nhsuk-table__header" scope="col">Stage</th>
+              <th class="nhsuk-table__header" scope="col"></th>
+            </tr>
+            </thead>
+            <tbody class="nhsuk-table__body">
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Discovery</td>
+              <td class="nhsuk-table__cell ">Before you start building a service, you need to find out whether
+                users need it and whether other services exist... you shouldn’t start
+                building your service in discovery</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Alpha</td>
+              <td class="nhsuk-table__cell ">…build prototypes of your service… test with users… demonstrate is
+                technically possible</td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Beta</td>
+              <td class="nhsuk-table__cell ">
+                <p>…objective is to build a working version of the service… handle real
+                transactions and work at scale… keep improving and replace or
+                integrate with existing services</p>
+                <p>You must launch your service in private beta before you launch it in
+                public beta</p>
+                <ul>
+                <li><strong>Private:</strong> A private beta is a beta that isn’t open to everyone –
+                constrained user base</li>
+                <li><strong>Public:</strong> A public beta is a version of your service that’s available for
+                any member of the public to use</li>
+                </ul>
+              </td>
+            </tr>
+            <tr class="nhsuk-table__row">
+              <td class="nhsuk-table__cell">Live</td>
+              <td class="nhsuk-table__cell ">The live phase is the time to keep improving your service based on
+                user feedback, analytics and your ongoing user research</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

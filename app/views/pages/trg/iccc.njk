@@ -1,0 +1,52 @@
+{% set pageTitle = "Interoperability CCC" %}
+{% set pageDescription = "Concerning the integration of systems and the communication and movement of data between them" %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg">TRG</a></li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/trg">TRG</a></p>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        {% include "./includes/_trg-side-navigation.njk" %}
+      </div>
+      <div class="app-pane__main-content">
+        <h2>Interoperability CCC</h2>
+        <p>The Interoperability CCC are concerned primarily with submissions that involve the integration of systems and the communication and movement of data between them. Ensuring that when this is the case it’s done in a standards-based way using appropriate integration patterns.</p>
+        <p>This would include APIs and interfaces when connecting systems together – assessing what you plan to use, re-use or build and what the potential security implications are. They are also concerned with the associated patterns of integration, e.g. messaging solutions, events, publish subscribe systems. A submission regarding the transmission of clinical data between systems would need to be reviewed by the Interoperability CCC.</p>
+        <p>It is recommended to engage with the Interoperability CCC as early as possible in the process of drafting your TRG submission.</p>
+        <h3>What evidence will they be looking for in your submission?</h3>
+        <ul>
+          <li>Have you engaged with the IOPS team to ensure the appropriate standards are being used?</li>
+          <li>Is the title of your submission clear and relevant as to what you’re looking to get approval for? Will it be clear to the Interoperability CCC if your submission is relevant to them?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
