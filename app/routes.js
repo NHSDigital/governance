@@ -68,8 +68,11 @@ router.get('/trg/iccc', (req, res) => {
 router.get('/trg/ua', (req, res) => {
   res.render('pages/trg/ua');
 });
-router.get('/trg/security', (req, res) => {
-  res.render('pages/trg/security');
+router.get('/trg/smccc', (req, res) => {
+  res.render('pages/trg/smccc');
+});
+router.get('/trg/duccc', (req, res) => {
+  res.render('pages/trg/duccc');
 });
 router.get('/trg/interoperability', (req, res) => {
   res.render('pages/trg/interoperability');
@@ -83,8 +86,14 @@ router.get('/trg/development', (req, res) => {
 router.get('/trg/infrastructure', (req, res) => {
   res.render('pages/trg/infrastructure');
 });
-router.get('/trg/dsa', (req, res) => {
-  res.render('pages/trg/dsa');
+router.get('/trg/dccc', (req, res) => {
+  res.render('pages/trg/dccc');
+});
+router.get('/trg/saccc', (req, res) => {
+  res.render('pages/trg/saccc');
+});
+router.get('/trg/tccce', (req, res) => {
+  res.render('pages/trg/tccce');
 });
 router.get('/trg/contacts', (req, res) => {
   res.render('pages/trg/contacts');
