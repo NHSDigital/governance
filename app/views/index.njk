@@ -1,3 +1,7 @@
+{% set pageTitle = "Technical Review and Governance" %}
+{% set pageDescription = "Helping architects, app / service designers and project professionals and leads to navigate our technical governance process." %}
+
+
 {% extends 'includes/layout.njk' %}
 
 {% block outerBody %}
@@ -6,8 +10,8 @@
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
         <div class="nhsuk-hero__wrapper">
-          <h1 class="nhsuk-u-margin-bottom-3">Technical Review and Governance</h1>
-          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">The role of the TRG is to provide technical reviews and governance across the delivery lifecycle of all NHS Digital projects. We ensure that the right criteria are being met (principles, strategies, policies, standards and guidance) at every step of the way from Discovery stage to Go Live.</p>
+          <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+          <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
         </div>
       </div>
     </div>
