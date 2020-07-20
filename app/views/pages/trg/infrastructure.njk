@@ -1,5 +1,5 @@
 {% set pageTitle = "Infrastructure CCC" %}
-{% set pageDescription = " " %}
+{% set pageDescription = "They consider architectural decisions and whether components of the proposed application or service are strategic and aligned with policy." %}
 
 {% extends 'includes/layout.njk' %}
 
@@ -36,7 +36,44 @@
         {% include "./includes/_trg-side-navigation.njk" %}
       </div>
       <div class="app-pane__main-content">
-        <h2></h2>
+        <h2>What is the role of the Infrastructure CCC?</h2>
+        <p>The Infrastructure CCC group consider architectural decisions and determine whether components of the proposed application or service are strategic and aligned with policy. The CCC contributes to the development and assessment of blueprints and reusable architectural patterns that represent good-practice.   
+        <p>Examples of what this includes are:</p>
+        <ul>
+          <li>Evaluating proposals for the use of non-native appliances within the cloud platform.</li>
+          <li>Considering resilience, availability targets and implications around achieving them.</li>
+          <li>Similarly, recovery point objective (RPO) and recovery time objective targets (RTO) – understanding what they are how they are achieved.</li>
+          <li>Considering the specified choices for auditing, monitoring and alerting.</li>
+          <li>Considering the purposes and mechanisms proposed for remote access.</li>
+          <li>Reviewing the proposed capacity planning and forward capacity trending.</li>
+          <li>Considering proposed tools to fulfil automation (scale, re-deployment, failover).</li>
+          <li>Identifying single points of failure.</li>
+          <li>Evaluating networking topology and strategy.</li>
+         </ul>
+        <h2>What evidence will they be looking for in your submission?</h2>
+        <p>Designs with diagrams to support clear network and infrastructure overviews.</p>
+        <p>Evidence that appropriate compute, network and storage components are chosen:</p>
+        <ul>
+          <li>That key characteristics of scalability, availability and reliability are appropriate for the phase of development (Discovery, Alpha, Beta, Live).
+          <li>There is a clear migration path away from tactical solutions as the work progresses through development phases.
+        </ul>
+        <p>Use of appropriate architectural components to support solution proposals for:</p>
+        <ul>
+          <li>security, identity and access (including PAM),</li>
+          <li>monitoring and auditing,</li>
+          <li>source control and CI/CD development.</li>
+        </ul>
+        <p>The CCC will look for the explicit use of appropriate common architectural structures, patterns and good-practice.</p>
+        <div class="nhsuk-promo nhsuk-promo--small">
+          <a class="nhsuk-promo__link-wrapper" href="mailto:philip.judge@nhs.net">
+            <div class="nhsuk-promo__content">
+              <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+              <p class="nhsuk-promo__description">
+                Philip Judge: philip.judge@nhs.net<br>
+              </p>
+            </div>
+          </a>
+        </div>
 
       </div>
     </div>
