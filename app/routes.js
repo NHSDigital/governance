@@ -104,5 +104,7 @@ router.get('/cookie-policy', (req, res) => {
 router.get('/cookie-confirmation', (req, res) => {
   res.render('pages/cookie-confirmation');
 });
-
+router.get('/updating-information', (req, res) => {
+  res.render('pages/updating-information');
+});
 module.exports = router;
