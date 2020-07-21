@@ -3,14 +3,39 @@
 
 {% extends "includes/layout.njk" %}
 
+{% block outerBody %}
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/">Home</a>
+      </p>
+    </div>
+  </nav>
+{% endblock %}
+
 {% block body %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
 
       <div class="nhsuk-u-reading-width">
-
-        <h1>{{ pageTitle }}</h1>
-
         <h2>What are cookies?</h2>
         <p>Cookies are files saved on your phone, tablet or computer when you visit a website.</p>
         <p>They store information about how you use the website, such as the pages you visit.</p>

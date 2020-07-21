@@ -1,0 +1,55 @@
+{% set pageTitle = "Updating information on this site" %}
+{% set pageDescription = "Find out about updating information on this site." %}
+
+{% extends "includes/layout.njk" %}
+
+{% block outerBody %}
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item">
+          <a class="nhsuk-breadcrumb__link" href="/">Home</a>
+        </li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/">Home</a>
+      </p>
+    </div>
+  </nav>
+{% endblock %}
+
+
+{% block body %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <p>This site has been made using the NHS.UK Service Manual guidelines.</p>
+      <p><a href="https://github.com/NHSDigital/governance">The source code for the site is available in GitHub</a></p>
+      <p>If you have spotted something that needs to be corrected, updated or added to the site you can go to <a href="https://github.com/NHSDigital/governance/issues">GitHub and raise an issue</a>. Please give as much information as you can. You can check the progress of the issue you’ve raised over time. Before raising an issue, please check to see if someone has already raised the same thing. All issues raised will be triaged, classified and prioritised. We will be using the issues raised here to drive the backlog of improvements to the site.</p>
+      <p>If you want to, you can make the change yourself and raise a PR to merge this into the codebase, but don’t worry if you don’t know how to do this, raising a ticket is fine.</p>
+      <div class="nhsuk-promo nhsuk-promo--small">
+        <a class="nhsuk-promo__link-wrapper" href="https://github.com/NHSDigital/governance">
+          <div class="nhsuk-promo__content">
+            <h3 class="nhsuk-promo__heading">Where do I go for more information?</h3>
+            <p class="nhsuk-promo__description">
+              GitHub and raise an issue<br>
+            </p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
