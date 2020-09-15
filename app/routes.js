@@ -71,6 +71,9 @@ router.get('/trg/ua', (req, res) => {
 router.get('/trg/smccc', (req, res) => {
   res.render('pages/trg/smccc');
 });
+router.get('/trg/sus', (req, res) => {
+  res.render('pages/trg/sus');
+});
 router.get('/trg/duccc', (req, res) => {
   res.render('pages/trg/duccc');
 });
