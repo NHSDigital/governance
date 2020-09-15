@@ -1,0 +1,80 @@
+{% set pageTitle = "Sustainability CCC" %}
+{% set pageDescription = "concerned with ensuring submissions have duly considered the climate and organisational impact of the proposed change." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg">TRG</a></li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/trg">TRG</a></p>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        {% include "./includes/_trg-side-navigation.njk" %}
+      </div>
+      <div class="app-pane__main-content">
+        <h2>What is the role of the Sustainability CCC?</h2>
+        <p>The Sustainability CCC is concerned with ensuring submissions have duly considered the climate and organisational impact of the proposed change.</p>
+        <p>This would include ensuring that services are:</p>
+        <ul>
+        <li>Right-sized for their utilisation, for instance by using serverless cloud compute.</li>
+        <li>Adopting higher-tier services where possible, indicating a preference for SaaS, PaaS over IaaS.</li>
+         <li>Considering and documenting the CO2 impact of service design choices.</li>
+        </ul>
+        <p>It is recommended to engage with the Sustainability CCC as early as possible in the process of drafting your TRG submission.</p>
+        <h3>What evidence will they be looking for in your submission?</h3>
+          <ul>
+            <li>How have you designed the service to ensure optimal resource utilisation?</li>
+            <li>If you are using IaaS tier services, have you articulated why SaaS or PaaS options are not available?</li>
+            <li>If you are using NHS-managed infrastructure, have you documented the CO2 impact of doing so?</li>
+        </ul>
+        <h3>Criteria / Areas of Concern</h3>
+        <p><Those marked by * also relate to physical infrastructure (including end-user devices)
+
+        <ul>
+
+<li>CO2 Assessment *: We need to define a process for this, but the core focus here will be on the colo facilities, but also on ensuring that services are designed such that they don't force adoption of CO2-expensive hardware (ie, smart phones)</li>
+<li>CoTS Preference: This looks for evidence that we considered SaaS solutions first, then PaaS, then existing commercial offerings and only as a last resort do we build it ourselves. </li>
+<li>Right-sized Services *:  This relates to ensuring that the compute, memory & storage footprint for a service is reasonably balanced. Taking this to an absolute minimum, whilst ideal, also creates potential service risks. Hence, the 'reasonable' element.  In cloud-architectures, this is going to be focused on use of things like auto-scaling, and just-in-time provisioning.</li>
+<li>Appropriate Services *: This looks at the operating hours and availability levels of the service, with the focus on ensuring that services run-dark when they are not in use. For example, development environments being powered-off outside of working hours. The availability focus is on ensuring that resilience and high-availability are implemented only where required, and in ways which minimise the active footprint.</li>
+<li>Efficient Data: This evaluates whether the transfer, storage and consumption of data are properly optimised. For example, ensuring that stored data assets are presented in a columnar format for analysis.</li>
+</ul>
+        <div class="nhsuk-promo nhsuk-promo--small">
+          <a class="nhsuk-promo__link-wrapper" href="mailto:dean.vipond1@nhs.net">
+            <div class="nhsuk-promo__content">
+              <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+              <p class="nhsuk-promo__description">
+                James Zviers: james.zviers@nhs.net<br>
+              </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
