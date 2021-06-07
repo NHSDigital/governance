@@ -33,5 +33,5 @@ jobs:
       with:
         app-name: 'architecture-service-manual'
         slot-name: 'staging'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_1c87ae70d954454fa20895aac340778d }}
+        publish-profile: ${{ secrets.Deployment_Secret }}
         package: .
