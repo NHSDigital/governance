@@ -1,0 +1,68 @@
+{% set pageTitle = "Enterprise Architecture CCC" %}
+{% set pageDescription = "Focused on ensuring alignment with our architecture principles." %}
+
+{% extends 'includes/layout.njk' %}
+
+{% block outerBody %}
+  <section class="nhsuk-hero">
+    <div class="nhsuk-width-container nhsuk-hero--border">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <div class="nhsuk-hero__wrapper">
+            <h1 class="nhsuk-u-margin-bottom-3">{{ pageTitle }}</h1>
+            <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">{{ pageDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/">Home</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/trg">TRG</a></li>
+      </ol>
+      <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="/trg">TRG</a></p>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full app-component-reading-width">
+    <div class="app-pane">
+      <div class="app-pane__side-bar">
+        {% include "./includes/_trg-side-navigation.njk" %}
+      </div>
+      <div class="app-pane__main-content">
+        <h2>What is the role of the Enterprise Architecture CCC?</h2>
+        <p>The role of the EA CCC is to ensure that submissions are aligned with our Architecture Principles. In addition the EA CCC represents the EAB at TRG ensuring that gaps identified in strategies, standards and technical policies are escalated.</p>
+        <p>The EA CCC will also:</p>
+        <ul>
+        <li>Ensure that opportunities to reuse existing services or external products and/or services have been investigated before the development of new products or services</li>
+        <li>•	Ensure that and new technologies being introduced are included within the Tech Radar.</li>
+        </ul>
+        <p>It is recommended to engage with the EA CCC as early as possible in the process of drafting your TRG submission.</p>
+        <h3>What evidence will they be looking for in your submission?</h3>
+        <ul>
+          <li>Has your solution been modelled in Archimate within Aalto?</li>
+          <li>For new services does the submission include evidence as to why there were no suitable existing in-house or market based products/services?</li>
+        </ul>
+
+        <div class="nhsuk-promo nhsuk-promo--small">
+          <a class="nhsuk-promo__link-wrapper" href="mailto:li.jenkins@nhs.net">
+            <div class="nhsuk-promo__content">
+              <h3 class="nhsuk-promo__heading">Who do I contact for more information?</h3>
+              <p class="nhsuk-promo__description">
+                Li Jenkins-Twist: li.jenkins@nhs.net<br>
+              </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
