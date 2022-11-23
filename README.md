@@ -11,6 +11,28 @@ Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">
 
 ## Running the application
 
-Clone the repo: `git clone https://nhsuk@dev.azure.com/nhsuk/nhsd.architecture-governance/_git/nhsd.architecture-governance architecture-service-manual` and whilst in the project directory `cd architecture-service-manual`, install the required npm packages with: `npm install`
+Clone the repo: 
 
-Run the project in development mode `npm run watch` and visit <a href="http://localhost:3000">http://localhost:3000</a>.
+``` 
+git clone https://github.com/RossBugginsNHS/nhsd-governance
+```
+
+Change to the project directory:
+
+```
+cd nhsd-governance
+```
+
+Install the required npm packages: 
+
+```
+npm install
+```
+
+Run the project in development mode:
+
+```
+npm run watch
+```
+ 
+View in browser <a href="http://localhost:3000">http://localhost:3000</a>.
