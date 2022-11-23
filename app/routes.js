@@ -86,6 +86,9 @@ router.get('/trg/lss', (req, res) => {
 router.get('/trg/development', (req, res) => {
   res.render('pages/trg/development');
 });
+router.get('/trg/ea', (req, res) => {
+  res.render('pages/trg/ea');
+});
 router.get('/trg/infrastructure', (req, res) => {
   res.render('pages/trg/infrastructure');
 });
