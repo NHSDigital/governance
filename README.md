@@ -14,7 +14,7 @@ Install the long-term support (LTS) version of <a href="https://nodejs.org/en/">
 Clone the repo: 
 
 ``` 
-git clone https://github.com/RossBugginsNHS/nhsd-governance
+git clone https://github.com/NHSDigital/governance
 ```
 
 Change to the project directory:
