@@ -35,7 +35,7 @@
     "cookie-consent": "https://github.com/nhsuk/cookie-consent.git",
     "express": "^4.17.1",
     "nhsuk-frontend": "^3.1.0",
-    "nunjucks": "^3.2.1",
+    "nunjucks": "^3.2.4",
     "path": "^0.12.7"
   },
   "devDependencies": {
