@@ -33,7 +33,7 @@
   "dependencies": {
     "compression": "^1.7.4",
     "cookie-consent": "https://github.com/nhsuk/cookie-consent.git",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "nhsuk-frontend": "^3.1.0",
     "nunjucks": "^3.2.1",
     "path": "^0.12.7"
@@ -43,7 +43,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/register": "^7.10.4",
     "babel-loader": "^8.1.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.1",
     "chai": "^4.2.0",
     "concurrently": "^4.1.2",
     "cpx": "^1.5.0",
