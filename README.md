@@ -1,3 +1,5 @@
+# Architecture service manual is currently under review, information here is for reference only and should not be relied upon
+
 # Architecture service manual
 
 https://architecture-service-manual.azurewebsites.net/
